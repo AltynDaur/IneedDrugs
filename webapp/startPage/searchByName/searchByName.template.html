@@ -1,0 +1,23 @@
+<div class="container">
+    <div>
+
+        <ac-select ac-model='selectedMedicine' ac-options='medicine.name for medicine in getAllMedicines()'
+                   ac-change='selectionChanged(value)' ac-settings='{ minSearchLength: 3, minWidth: "200px",loadOnOpen: true }'></ac-select>
+        <span ng-show="medicineInfo">{{medicineInfo}}</span>
+        <div ng-show="medicineInfo">
+            <table class="table table-responsive">
+                <tr>
+                    <th>Лекарство</th>
+                    <th>Стоимость лекарства</th>
+                    <th>Описание лекарства</th>
+                </tr>
+                <tr ng-repeat="medicine in analogs" >
+                    <td>{{medicine.name}}</td>
+                    <td>{{medicine.cost}}</td>
+                    <td>{{medicine.description}}</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
