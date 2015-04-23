@@ -4141,7 +4141,8 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .nav > li {
     position: relative;
-    display: block
+    display: block;
+    background-color: lightblue;
 }
 
 .nav > li > a {
@@ -4163,7 +4164,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
     color: #777;
     text-decoration: none;
     cursor: not-allowed;
-    background-color: transparent
+    background-color: green
 }
 
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {

@@ -1,11 +1,22 @@
-<div class="container">
-    <div>
 
-        <ac-select ac-model='selectedMedicine' ac-options='medicine.name for medicine in getAllMedicines()'
-                   ac-change='selectionChanged(value)' ac-settings='{ minSearchLength: 3, minWidth: "200px",loadOnOpen: true }'></ac-select>
-        <span ng-show="medicineInfo">{{medicineInfo}}</span>
-        <div ng-show="medicineInfo">
-            <table class="table table-responsive">
+    <div>
+        <div class='wrap'>
+        <span>
+            {{selected.name}}
+            <i class='fontawesome-remove' ng-click='clear()' ng-show='selected'></i>
+        </span>
+            <input ng-change='change()' ng-model='query.name' placeholder=' ' type='text' xng-focus='cleared'>
+            <ul class='{{state}} selectbox' ng-show='query'>
+                <li ng-click='select(item)' ng-repeat='item in medicines | filter: query.name'>
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
+
+
+        <div ng-show="selected">
+            <div>{{selected.name}}</div>
+            <table class="table col-lg-8">
                 <tr>
                     <th>Лекарство</th>
                     <th>Стоимость лекарства</th>
@@ -20,4 +31,3 @@
 
         </div>
     </div>
-</div>

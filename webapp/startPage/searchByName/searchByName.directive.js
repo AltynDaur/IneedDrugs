@@ -1,6 +1,7 @@
 (function(){
     angular.module('searchByName').directive('searchByName',searchByNameDirective);
 
+
     function searchByNameDirective(){
         return {
             restrict: 'E',
@@ -8,4 +9,5 @@
             templateUrl:'/IneedDrugs/startPage/searchByName/searchByName.template.html'
         };
     };
+
 })();
