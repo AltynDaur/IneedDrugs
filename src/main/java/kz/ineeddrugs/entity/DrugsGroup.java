@@ -13,7 +13,7 @@ public class DrugsGroup {
     @Id
     private long id;
     private String name;
-    @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @Fetch(FetchMode.SUBSELECT)
     private List<Drug> drugsList;
     private String description;

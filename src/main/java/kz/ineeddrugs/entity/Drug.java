@@ -17,8 +17,8 @@ public class Drug {
     @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @Fetch(FetchMode.SUBSELECT)
     private List<ActiveElement> activeElement;
-    @ManyToMany(mappedBy = "drugsList")
-    private List<DrugsGroup> drugGroup;
+    @ManyToOne
+    private DrugsGroup drugGroup;
     private int middleCost;
 
     public long getId() {
