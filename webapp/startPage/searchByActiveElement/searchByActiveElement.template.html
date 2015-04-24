@@ -1,18 +1,37 @@
-<div class="container">
-    <div>
-        <input type="text" ng-model="searchParam" placeholder="Type number of medicine...">
-        <div ng-show="showAnswer()">
-            <table class="table table-responsive">
-                <tr>
-                    <th>Номер лекарства</th>
-                    <th>Название</th>
-                </tr>
-                <tr ng-repeat="medicine in medicines | filter:searchParam" >
-                    <td>{{medicine.number}}</td>
-                    <td>{{medicine.name}}</td>
-                </tr>
-            </table>
 
-        </div>
+<div>
+    <div class='wrap'>
+        <span>
+            {{selected.name}}
+            <i class='fontawesome-remove' ng-click='clear()' ng-show='selected'></i>
+        </span>
+        <input ng-change='change()' ng-model='query.number' placeholder=' ' type='text' xng-focus='cleared'>
+        <ul class='{{state}} selectbox' ng-show='query'>
+            <li ng-click='select(item)' ng-repeat='item in medicines | filter: query.number'>
+                {{item.name}}
+            </li>
+        </ul>
+    </div>
+
+
+    <div ng-show="selected">
+        <div>{{selected.name}}</div>
+        <table class="table col-lg-8">
+            <tr>
+                <th>Лекарство</th>
+                <th>Стоимость лекарства</th>
+                <th>Описание лекарства</th>
+                <th>Активный элемент</th>
+                <th>Аптека</th>
+            </tr>
+            <tr ng-repeat="medicine in analogs" >
+                <td>{{medicine.name}}</td>
+                <td>{{medicine.cost}}</td>
+                <td>{{medicine.description}}</td>
+                <td>{{medicine.activeElement}}</td>
+                <td><a href="{{medicine.drugStore.link}}">{{medicine.drugStore.name}}</a></td>
+            </tr>
+        </table>
+
     </div>
 </div>

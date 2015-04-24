@@ -3,7 +3,7 @@
     angular.module('iNeedDrugsApp').config(iNeedDrugsAppConfig);
 
     function iNeedDrugsAppConfig($stateProvider, $urlRouterProvider, $translateProvider){
-        var appRoute = "/IneedDrugs"
+        var appRoute = "/IneedDrugs";
         $stateProvider.state('start',{
             url: '/',
             controller: 'StartPageController',
@@ -12,10 +12,12 @@
         $urlRouterProvider.otherwise('/');
 
         $translateProvider.translations('ru',{
-            CHANGELANGUAGE:'Сменить язык'
+            CHANGELANGUAGE:'Сменить язык',
+            PROPOSEMEDICINE: 'Предложить добавить лекарство'
         });
         $translateProvider.translations('en',{
-            CHANGELANGUAGE: 'Change language    '
+            CHANGELANGUAGE: 'Change language',
+            PROPOSEMEDICINE: 'Propose add drug'
         });
         $translateProvider.preferredLanguage('en');
     };

@@ -21,11 +21,15 @@
                     <th>Лекарство</th>
                     <th>Стоимость лекарства</th>
                     <th>Описание лекарства</th>
+                    <th>Активный элемент</th>
+                    <th>Аптека</th>
                 </tr>
                 <tr ng-repeat="medicine in analogs" >
                     <td>{{medicine.name}}</td>
                     <td>{{medicine.cost}}</td>
                     <td>{{medicine.description}}</td>
+                    <td>{{medicine.activeElement}}</td>
+                    <td><a href="{{medicine.drugStore.link}}">{{medicine.drugStore.name}}</a></td>
                 </tr>
             </table>
 

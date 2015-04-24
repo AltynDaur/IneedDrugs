@@ -1,5 +1,5 @@
-<form class="form-inline">
-    <div class="btn-group dropup form-group">
+<form>
+    <div class="btn-group dropup" style="float: left">
         <button type="button" class="btn btn-primary dropdown-toggle" id="language" data-toggle="dropdown" aria-expanded="false">
             {{'CHANGELANGUAGE' | translate}} <span class="caret"></span>
         </button>
@@ -8,5 +8,8 @@
             <li class="divider"></li>
             <li><a href="" ng-click="changeLanguage('en')">English</a></li>
         </ul>
+    </div>
+    <div align="center">
+        <h2><a href="" ng-click="proposeMedicine()">{{'PROPOSEMEDICINE' | translate}}</a></h2>
     </div>
 </form>

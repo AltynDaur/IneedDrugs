@@ -19,18 +19,33 @@
         $scope.analogs = [
             {
                 'name':'Paracetamol',
-                'cost':'1000',
-                'description':'Cool thing'
+                'cost':'150',
+                'description':'Cool thing',
+                'activeElement': 'Paracetamol',
+                'drugStore':{
+                    'name': 'BioSfera',
+                    'link': 'http://biosfera.kz/product/product?product_id=2597'
+                }
             },
             {
-                'name':'Aspirin',
-                'cost':'1',
-                'description':'Awesome drug'
+                'name':'Парацетофит',
+                'cost':'275',
+                'description':'Awesome drug',
+                'activeElement': 'Paracetamol',
+                'drugStore':{
+                    'name': 'BioSfera',
+                    'link': 'http://biosfera.kz/product/product?product_id=2605'
+                }
             },
             {
-                'name':'Fervex',
-                'cost':'50',
-                'description':'Against cold'
+                'name':'Агриппин с парацетамолом',
+                'cost':'90',
+                'description':'Against cold',
+                'activeElement': 'Paracetamol',
+                'drugStore':{
+                    'name': 'BioSfera',
+                    'link': 'http://biosfera.kz/product/product?product_id=116'
+                }
             }
         ];
         $scope.selected = '';
