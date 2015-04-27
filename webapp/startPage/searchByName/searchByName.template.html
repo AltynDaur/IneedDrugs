@@ -1,16 +1,8 @@
-
     <div>
-        <div class='wrap'>
-        <span>
-            {{selected.name}}
-            <i class='fontawesome-remove' ng-click='clear()' ng-show='selected'></i>
-        </span>
-            <input ng-change='change()' ng-model='query.name' placeholder=' ' type='text' xng-focus='cleared'>
-            <ul class='{{state}} selectbox' ng-show='query'>
-                <li ng-click='select(item)' ng-repeat='item in medicines | filter: query.name'>
-                    {{item.name}}
-                </li>
-            </ul>
+        <div class="wrap">
+            <ac-select ac-model='inputValue' ac-options='medicine.name for medicine in medicines'
+                       ac-change='selectionChanged(value)' ac-settings='{ loadOnOpen: false, loadOnCreate: false, comboMode: true, maxWidth:"150px", debug:true }'></ac-select>
+
         </div>
 
 

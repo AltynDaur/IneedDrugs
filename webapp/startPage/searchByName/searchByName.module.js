@@ -1,3 +1,3 @@
 (function(){
-    angular.module('searchByName',[]);
+    angular.module('searchByName',['acute.select']);
 })();
