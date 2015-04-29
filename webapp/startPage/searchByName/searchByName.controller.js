@@ -18,8 +18,8 @@
 
         $scope.analogs = [
             {
-                'name':'Paracetamol',
-                'cost':'150',
+                'name':'Antigrippin(Kazakhstan)',
+                'cost':'0.6$',
                 'description':'Cool thing',
                 'activeElement': 'Paracetamol',
                 'drugStore':{
@@ -28,8 +28,8 @@
                 }
             },
             {
-                'name':'Парацетофит',
-                'cost':'275',
+                'name':'Coldrex',
+                'cost':'5.4$',
                 'description':'Awesome drug',
                 'activeElement': 'Paracetamol',
                 'drugStore':{
@@ -38,8 +38,8 @@
                 }
             },
             {
-                'name':'Агриппин с парацетамолом',
-                'cost':'90',
+                'name':'Antigrippin Extra (Netherlands)',
+                'cost':'10.38$',
                 'description':'Against cold',
                 'activeElement': 'Paracetamol',
                 'drugStore':{
