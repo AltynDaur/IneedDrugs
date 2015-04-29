@@ -1,6 +1,8 @@
 
     <div>
+        <div align="center" class="jumbotron"><h3>{{'ENTERNAME' | translate}}</h3></div>
         <div class='wrap'>
+
         <span>
             {{selected.name}}
             <i class='fontawesome-remove' ng-click='clear()' ng-show='selected'></i>
@@ -18,11 +20,11 @@
             <div>{{selected.name}}</div>
             <table class="table col-lg-8">
                 <tr>
-                    <th>Лекарство</th>
-                    <th>Стоимость лекарства</th>
-                    <th>Описание лекарства</th>
-                    <th>Активный элемент</th>
-                    <th>Аптека</th>
+                    <th>{{'MEDICINE' | translate}}</th>
+                    <th>{{'MEDICINECOST' | translate}}</th>
+                    <th>{{'MEDICINEDESCR'  | translate}}</th>
+                    <th>{{'ACTIVEELEMENT' | translate}}</th>
+                    <th>{{'DRUGSTORE' | translate}}</th>
                 </tr>
                 <tr ng-repeat="medicine in analogs" >
                     <td>{{medicine.name}}</td>

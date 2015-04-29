@@ -19,7 +19,7 @@ body {
 }
 
 .wrap {
-    margin: 100px auto;
+    margin: 50px auto;
     width: 200px;
     position: relative;
 }
@@ -78,10 +78,10 @@ span i {
     margin-left: 2px;
 }
 footer {
-    position: fixed; /* Фиксированное положение */
-    left: 0; bottom: 0; /* Правый нижний угол */
-    padding: 10px; /* Поля вокруг текста */
-    background: #C3D0DB; /* Цвет фона */
-    color: #fff; /* Цвет текста */
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 10px;
+    background: #C3D0DB;
+    color: #fff;
     width: 100%;
 }
